@@ -40,10 +40,10 @@ export default function ProductDetailModalComponent({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
       
-      {/* MODAL */}
+      
       <div className="relative w-full max-w-3xl rounded-[1.8rem] border border-white/10 bg-zinc-950 p-5 text-white shadow-2xl">
         
-        {/* CLOSE */}
+       
         <button
           onClick={onClose}
           className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/5 transition hover:bg-white hover:text-black"
@@ -53,7 +53,7 @@ export default function ProductDetailModalComponent({
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           
-          {/* IMAGE */}
+        
           <div>
             <div className="relative aspect-square overflow-hidden rounded-3xl bg-black/30">
               <Image
@@ -76,7 +76,7 @@ export default function ProductDetailModalComponent({
             </div>
           </div>
 
-          {/* CONTENT */}
+         
           <div className="flex flex-col justify-between">
             
             <div>
@@ -92,7 +92,7 @@ export default function ProductDetailModalComponent({
                 {description}
               </p>
 
-              {/* PRICE */}
+             
               <div className="mt-5 flex items-center gap-3">
                 <h2 className="text-3xl font-bold">
                   ${priceOut}
@@ -103,7 +103,7 @@ export default function ProductDetailModalComponent({
                 </span>
               </div>
 
-              {/* STATUS */}
+             
               <div className="mt-5 flex items-center gap-3">
                 <div className="rounded-2xl bg-white/5 px-4 py-3">
                   <p className="text-xs text-gray-400">
@@ -134,7 +134,6 @@ export default function ProductDetailModalComponent({
                 </div>
               </div>
 
-              {/* MINI SPEC */}
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <MiniSpec
                   label="Processor"
@@ -158,7 +157,7 @@ export default function ProductDetailModalComponent({
               </div>
             </div>
 
-            {/* WARRANTY */}
+           
             <div className="mt-5 rounded-2xl bg-white/5 p-4">
               <p className="text-xs uppercase tracking-wide text-gray-500">
                 Warranty

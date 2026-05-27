@@ -10,7 +10,7 @@ export default function ProductComponent({
   return (
     <div className="w-full max-w-sm overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
 
-      {/* Thumbnail */}
+      
       <div className="relative flex h-72 items-center justify-center bg-gray-100 p-4">
         <Image
           src={thumbnail}
@@ -21,10 +21,10 @@ export default function ProductComponent({
         />
       </div>
 
-      {/* Content */}
+     
       <div className="space-y-5 p-5">
 
-        {/* Name + Price */}
+       
         <div className="flex items-center justify-between gap-3">
           <h2 className="line-clamp-1 text-2xl font-bold text-gray-900">
             {name}
@@ -35,7 +35,7 @@ export default function ProductComponent({
           </span>
         </div>
 
-        {/* Actions */}
+      
         <div className="flex gap-3">
           <button className="flex-1 rounded-2xl bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700">
             Buy Now
