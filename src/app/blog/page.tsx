@@ -1,4 +1,5 @@
-import BlogComponent from "@/components/BlogComponent";
+
+import BlogComponent from "@/components/compo/BlogComponent";
 import { blogType } from "@/lib/blog/blog-type";
 import { profile } from "console";
 
