@@ -1,46 +1,34 @@
-'use client'
-import { useState } from "react";
+'use client';
+
+import Link from "next/link";
 
 type SidebarProps = {
   className?: string;
 };
 
+const menuItems = [
+  { label: "Dashboard", path: "..//dashboard" },
+  { label: "Products", path: "..//dashboard/products" },
+  { label: "Create Product", path: "..//dashboard/create" },
+  { label: "Edit Product", path: "../dashboard/edit" },
+  { label: "Blog", path: "../dashboard/blog" },
+  { label: "Setting", path: "../dashboard/setting" },
+];
+
 export default function DashboardSidebar({ className = "" }: SidebarProps) {
-  const [openDropdown, setOpenDropdown] = useState(false);
-
   return (
-   <aside className="left-0 h-fit top-[73px] w-64   ">
+    <aside className={`left-0 h-fit top-[73px] w-64 ${className}`}>
       <ul className="space-y-2 font-medium">
-        <li>
-          <a
-            href="#"
-            className="flex items-center rounded-lg px-2 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            <span className="ms-3">Dashboard</span>
-          </a>
-        </li>
-
-
-        {["Products", "Create Product", "Edit Product", "Blog" , "Setting" ].map((item) => (
-          <li key={item}>
-            <a
-              href="#"
+        {menuItems.map((item) => (
+          <li key={item.path}>
+            <Link
+              href={item.path}
               className="flex items-center rounded-lg px-2 py-2 text-gray-700 hover:bg-gray-100"
             >
-              <span className="ms-3 flex-1 whitespace-nowrap">{item}</span>
-
-              {item === "Kanban" && (
-                <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
-                  Pro
-                </span>
-              )}
-
-              {item === "Inbox" && (
-                <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs text-red-600">
-                  2
-                </span>
-              )}
-            </a>
+              <span className="ms-3 flex-1 whitespace-nowrap">
+                {item.label}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>

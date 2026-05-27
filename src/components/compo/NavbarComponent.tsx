@@ -11,7 +11,7 @@ export default function NavbarComponent() {
         <Link href="../../product">Homework2</Link>
         <Link href="../../login">Login</Link>
         <Link href="../../register">Register</Link>
-        <Link href="../../dashboard">Dashboard</Link>
+        <Link href="../../dashboard">Homework3</Link>
         <Link href="../../greeting">API Route</Link>
 
       </NavbarCollapse>
